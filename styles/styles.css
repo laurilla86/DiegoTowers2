@@ -1,0 +1,253 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+/* TODAS LAS PAGES */
+body {
+    display: flex;
+    flex-direction: column;
+    background-image:url("./../assets/Multicolor.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: normal;
+    width: 100%;
+    height: auto;
+}
+
+header {
+    background-color: #9649e5;
+    display: flex;
+    left: 0;
+    top: 0;
+    right: 0;
+}
+
+footer a,
+header a {
+    color: #f6f4f4;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#Logo {
+    width: 150px;
+}
+
+.navbar {
+    display: flex;
+    align-items: flex-end;
+}
+
+.navbar ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}   
+
+.navbar ul li {
+    display: inline-block;
+}
+
+.navbar ul li a {
+    display: block;
+    padding: 0.5rem 1rem ;
+}
+.navbar ul li a:hover {
+    background-color: #6305c3;
+    border-radius: 5px;
+}
+
+.footer{
+    background-color: #d9d9d9;
+    position: fixed;
+    height: 50px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+/* PAGE INICIO */
+
+.content {
+    padding-top: 3rem;
+    background-color: #f6f4f4;
+    width: 70%;
+    align-content: center;
+    margin-left: 180px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 3rem;
+    
+}
+
+/* media query tablet */
+@media screen and (max-width: 760px) {
+    .content {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .tarjetaPadre {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .header,
+    .footer {
+        flex-direction: column;
+    }
+}
+
+/* media quuery mobile */
+
+@media screen and (max-width: 365px) {
+    .content {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .tarjetaPadre {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .header,
+    .footer {
+        flex-direction: column;
+    }
+}
+/* media query desktop */
+
+@media screen and (min-width:761px) {
+    .tarjetaPadre {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.content .imagenPrincipal {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    
+}
+
+.content .imagenPrincipal img {
+    width: 100%;    
+}
+
+/* PAGE CONTACTO */
+.grilla {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-areas:
+        ". . . . . . ."
+        ". . form form form . ."
+        ". . form form form . ."
+        ". . form form form . ."
+        ". . form form form . ."
+}
+
+.contentForm {
+    background-color: #f6f4f4;
+    width: 130%;
+    margin-left: 180px;
+    padding-left: 50px;
+}
+
+.form {
+    grid-area: form;
+    width: 100%;
+    padding: 50px;
+    width: 450px;
+}
+
+.titulo {
+    grid-area: titulo;
+}
+
+.field,
+.select {
+    border:#f6f4f4 solid 1px;
+    border-radius: 5px;
+    padding: 5px;
+    width: 700px;
+}
+
+.field:focus {
+    border-color: #9649e5;
+}
+
+.checkbox {
+
+}
+
+/* PAGE ABOUT */
+
+.about {
+    display: flex;
+    width: 70%;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f6f4f4;
+    margin-left: 190px;
+    padding-bottom: 3rem;
+}
+
+.about .imagenDiego {
+    width: 80%;
+    height: auto;
+}
+
+.about .imagenDiego img{
+    width: 90%;
+    padding-left: 5px;
+    padding-bottom: 3px;
+    margin-top: 0.5rem;
+}
+
+.info {
+    width: 60%;
+    
+}
+
+/* page ASESORAMIENTO */
+
+.tarjetaPadre {
+    display: flex;
+    flex-direction: row;
+    height: 300px;
+    justify-content: space-between;
+    justify-items: center;
+}
+
+.tarjeta {
+    background-color: white;
+    border:#9649e5 solid 1px;
+    width: 12rem;
+    border-radius: 5px;
+}
+
+.tarjeta img {
+    width: 100%;
+}
+
+.button {
+    background-color: #9649e5;
+    border-radius: 5px;
+    padding: 5px;
+    width: 100px;
+    color:#f6f4f4;
+    border: 1px solid #9649e5;
+}
